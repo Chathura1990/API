@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "a417209c-7a99-4212-96b1-feb20958789a",
+		"name": "Create new user and delete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0b663be-f93a-4e47-be4a-b6525a5e4062",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "testt@mail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "testt",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister?email=chathura@maila.com&name=testhia&password=123456",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "chathura@maila.com"
+						},
+						{
+							"key": "name",
+							"value": "testhia"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				},
+				"description": "register a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "testt@mail.com",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=chathura@maila.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "chathura@maila.com"
+						}
+					]
+				},
+				"description": "Delete user"
+			},
+			"response": []
+		}
+	]
+}
